@@ -5,6 +5,9 @@ class Quote(models.Model):
     author = models.CharField(blank=True, max_length=255, help_text='The quote\'s author')
     circa = models.CharField(blank=True, max_length=100, help_text="When was the quote created?")
     quote = models.TextField()
+    image_width = models.IntegerField(blank=True, editable=False)
+    image_height = models.IntegerField(blank=True, editable=False)
+    image = models.ImageField(upload_to='django-quotes', height_field="image_height", width_field="image_width")
 
     class Meta:
         verbose_name_plural = 'Quotes'

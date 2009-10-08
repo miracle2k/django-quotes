@@ -1,5 +1,10 @@
 {% if random_quote %}
 <div class="quote">
+    <div class="quoteImage">
+	{% if random_quote.image %}
+	<img src="{{ random_quote.image.url }}" />
+	{% endif %}
+    </div>
     <div class="quoteCopy">
         {% if random_quote.quote %}
             <p>{{ random_quote.quote }}</p>
