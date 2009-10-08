@@ -12,3 +12,5 @@ def show_random_quote():
          random_quote = Quote.objects.order_by('?')[0]
     except ValueError:
         print "There are no quotes"
+
+    return {'random_quote': random_quote}
