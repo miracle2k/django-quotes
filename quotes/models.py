@@ -22,8 +22,8 @@ class Quote(models.Model):
                               width_field="image_width")
 
     class Meta:
-        verbose_name = 'Quote'
-        verbose_name_plural = 'Quotes'
+        verbose_name = _('Quote')
+        verbose_name_plural = _('Quotes')
 
     def __unicode__(self):
         return self.slug

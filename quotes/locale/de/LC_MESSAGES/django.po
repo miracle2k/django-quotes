@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-09 12:59+0200\n"
+"POT-Creation-Date: 2009-10-09 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,34 +16,38 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\models.py:6
+#: .\models.py:8
 msgid "Slug"
 msgstr "Slug"
 
-#: .\models.py:7
+#: .\models.py:9
 msgid "A shortname for the quote."
 msgstr "Ein kurzer Name für das Zitat."
 
-#: .\models.py:9
+#: .\models.py:11
 msgid "Author"
 msgstr "Autor"
 
-#: .\models.py:10
+#: .\models.py:12
 msgid "The quote's author"
 msgstr "Wer hat's gesagt?"
 
-#: .\models.py:12
+#: .\models.py:14
 msgid "Circa"
 msgstr "Circa"
 
-#: .\models.py:13
+#: .\models.py:15
 msgid "When was the quote created?"
 msgstr "Wann wurde es gesagt?"
 
-#: .\models.py:14
+#: .\models.py:16 .\models.py:25
 msgid "Quote"
 msgstr "Zitat"
 
-#: .\models.py:17
+#: .\models.py:19
 msgid "Image"
 msgstr "Bild"
+
+#: .\models.py:26
+msgid "Quotes"
+msgstr "Zitate"
