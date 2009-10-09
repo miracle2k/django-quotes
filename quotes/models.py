@@ -1,13 +1,23 @@
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 class Quote(models.Model):
-    slug = models.SlugField(max_length=255, unique=True, help_text='A shortname for the quote.')
-    author = models.CharField(blank=True, max_length=255, help_text='The quote\'s author')
-    circa = models.CharField(blank=True, max_length=100, help_text="When was the quote created?")
-    quote = models.TextField()
+    slug = models.SlugField(max_length=255, unique=True,
+                            verbose_name=_('Slug'),
+                            help_text=_('A shortname for the quote.'))
+    author = models.CharField(blank=True, max_length=255,
+                              verbose_name=_('Author'),
+                              help_text=_('The quote\'s author'))
+    circa = models.CharField(blank=True, max_length=100,
+                             verbose_name=_('Circa'),
+                             help_text=_('When was the quote created?'))
+    quote = models.TextField(verbose_name=_('Quote'))
     image_width = models.IntegerField(blank=True, editable=False)
     image_height = models.IntegerField(blank=True, editable=False)
-    image = models.ImageField(upload_to='django-quotes', height_field="image_height", width_field="image_width")
+    image = models.ImageField(verbose_name=_('Image'),
+                              upload_to='django-quotes',
+                              height_field="image_height",
+                              width_field="image_width")
 
     class Meta:
         verbose_name = 'Quote'
