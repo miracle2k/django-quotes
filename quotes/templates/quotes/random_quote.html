@@ -2,7 +2,7 @@
 <div class="quote">
     <div class="quoteImage">
 	{% if random_quote.image %}
-	<img src="{{ random_quote.image.url }}" />
+	<img src="{{ random_quote.image.url }}" style="width: {{ random_quote.image_width }}px; height: {{ random_quote.image_height }}px;" />
 	{% endif %}
     </div>
     <div class="quoteCopy">
