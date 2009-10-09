@@ -10,6 +10,7 @@ class Quote(models.Model):
     image = models.ImageField(upload_to='django-quotes', height_field="image_height", width_field="image_width")
 
     class Meta:
+        verbose_name = 'Quote'
         verbose_name_plural = 'Quotes'
 
     def __unicode__(self):
