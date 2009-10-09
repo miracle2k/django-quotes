@@ -30,3 +30,9 @@ the templates using the provided template tags::
 
 The above will gather the quotes from the model and then randomly display them one at a time.
 
+Settings
+========
+
+You can specify a QUOTES_IMAGE_DIR setting, which will be piped into the ``upload_to`` 
+option of the image field, allowing you to customize where your images should be saved.
+This can be relative to the MEDIA_URL setting.

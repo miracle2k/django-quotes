@@ -1,5 +1,7 @@
 from django.db import models
+from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
+
 
 class Quote(models.Model):
     slug = models.SlugField(max_length=255, unique=True,
@@ -15,7 +17,7 @@ class Quote(models.Model):
     image_width = models.IntegerField(blank=True, editable=False)
     image_height = models.IntegerField(blank=True, editable=False)
     image = models.ImageField(verbose_name=_('Image'),
-                              upload_to='django-quotes',
+                              upload_to=getattr(settings, 'QUOTES_IMAGE_DIR', 'quotes'),
                               height_field="image_height",
                               width_field="image_width")
 
