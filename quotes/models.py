@@ -14,8 +14,8 @@ class Quote(models.Model):
                              verbose_name=_('Circa'),
                              help_text=_('When was the quote created?'))
     quote = models.TextField(verbose_name=_('Quote'))
-    image_width = models.IntegerField(blank=True, editable=False)
-    image_height = models.IntegerField(blank=True, editable=False)
+    image_width = models.IntegerField(null=True, blank=True, editable=False)
+    image_height = models.IntegerField(null=True, blank=True, editable=False)
     image = models.ImageField(verbose_name=_('Image'),
                               upload_to=getattr(settings, 'QUOTES_IMAGE_DIR', 'quotes'),
                               height_field="image_height",
